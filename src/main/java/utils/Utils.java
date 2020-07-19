@@ -24,6 +24,24 @@ public class Utils {
         return head;
     }
 
+    //返回一个一维数组[1,2,3,4,5]
+    public static int[] getArr1() {
+        int arr[] = {1, 2, 3, 4, 5};
+        return arr;
+    }
+
+    //返回一个二维数组
+    public static int[][] getArr2() {
+        int arr[][] = {{1, 2, 3, 4, 5}, {2, 3, 4, 5, 6}};
+        return arr;
+    }
+
+    //返回一个无序数组
+    public static int[] getArrNOreder() {
+        int arr[] = {1, 4, 6, 2, 7, 8, 3, 9, 5, 10};
+        return arr;
+    }
+
     // 打印一维数组
     public static void printarr(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
