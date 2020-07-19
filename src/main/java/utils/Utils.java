@@ -49,7 +49,7 @@ public class Utils {
         }
     }
 
-    //打印二位数组
+    //打印二维数组
     public static void printarr(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
@@ -60,8 +60,15 @@ public class Utils {
     }
 
     //打印链表
+    public static void printNode(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+    }
+
     //打印集合
-    public static void printlist(List list) {
+    public static void printList(List list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
         }
