@@ -41,6 +41,6 @@ public class 调整数组顺序使奇数位于偶数前面 {
         for (int j = 0; j < ou.size(); j++) {
             res[i++] = ou.get(j);
         }
-        utils.utils.printarr(res);
+        utils.printarr(res);
     }
 }

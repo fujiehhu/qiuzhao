@@ -30,6 +30,7 @@ public class utils {
         return arr;
     }
 
+    // 不能根据返回类型定义重写，重写条件 参数列表不同，参数类型不同。
     //返回一个二维数组
     public static int[][] getArr2() {
         int arr[][] = {{1, 2, 3, 4, 5}, {2, 3, 4, 5, 6}};
@@ -54,9 +55,22 @@ public class utils {
             System.out.print(arr[i] + " ");
         }
     }
+    public static void printarr(double[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
 
     //打印二维数组
     public static void printarr(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public static void printarr(double[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
