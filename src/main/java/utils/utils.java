@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by lenovo on 20/7/19.
  */
-public class Utils {
+public class utils {
 
     //返回一个链表 {1，2，3，4，5}
     public static ListNode getList() {

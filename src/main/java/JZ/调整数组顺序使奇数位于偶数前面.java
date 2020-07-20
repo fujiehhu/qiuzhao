@@ -1,6 +1,6 @@
 package JZ;
 
-import utils.Utils;
+import utils.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class 调整数组顺序使奇数位于偶数前面 {
      */
     public static void main(String[] args) {
         int[] arr = {2, 4, 3, 8,1};
-//        Utils.printarr(arr);
+//        utils.printarr(arr);
         reOrderArray(arr);
     }
 
@@ -41,6 +41,6 @@ public class 调整数组顺序使奇数位于偶数前面 {
         for (int j = 0; j < ou.size(); j++) {
             res[i++] = ou.get(j);
         }
-        Utils.printarr(res);
+        utils.utils.printarr(res);
     }
 }

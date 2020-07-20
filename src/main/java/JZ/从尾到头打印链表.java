@@ -1,6 +1,6 @@
 package JZ;
 
-import utils.Utils;
+import utils.utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -11,8 +11,8 @@ import java.util.Collections;
 public class 从尾到头打印链表 {
     //    输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
     public static void main(String[] args) {
-        ListNode node = Utils.getList();
-        Utils.printList(printListFromTailToHead(node));
+        ListNode node = utils.utils.getList();
+        utils.utils.printList(printListFromTailToHead(node));
     }
 
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
