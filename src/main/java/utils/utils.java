@@ -36,6 +36,12 @@ public class utils {
         return arr;
     }
 
+    //返回一个二维数组
+    public static int[][] getArr3() {
+        int arr[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        return arr;
+    }
+
     //返回一个无序数组
     public static int[] getArrNOreder() {
         int arr[] = {1, 4, 6, 2, 7, 8, 3, 9, 5, 10};
@@ -67,11 +73,48 @@ public class utils {
         }
     }
 
-
     //打印集合
     public static void printList(List list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
         }
+    }
+
+    //十进制转二进制
+    public static StringBuilder dec2bin(int i) {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (i < 0) {
+            return null;
+        }
+        while (i != 0) {
+            stringBuilder.append(i % 2);
+            i /= 2;
+        }
+        return stringBuilder.reverse();
+    }
+
+    //二分查找
+    public static int binarysearch(int nums[], int target) {
+        java.util.Arrays.sort(nums);
+        if (nums.length < 0) {
+            return -1;
+        }
+        int st = 0;
+        int ed = nums.length - 1;
+        int mid = (st + ed) / 2;
+        while (st < ed) {
+            if (nums[mid] > target) {
+                ed = mid - 1;
+                mid = (st + ed) / 2;
+            }
+            if (nums[mid] < target) {
+                st = mid + 1;
+                mid = (st + ed) / 2;
+            }
+            if (nums[mid] == target) {
+                return mid;
+            }
+        }
+        return -1;
     }
 }
