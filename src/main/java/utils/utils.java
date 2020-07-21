@@ -12,13 +12,13 @@ public class utils {
 
     //返回一个 指定长度有序 链表 {1，2，3，4，5,...}
     public static ListNode getListOrder(int length) {
-        ListNode head = new ListNode(1);
+        ListNode head = new ListNode(0);
         ListNode p = head;
-        for (int i = 2; i < length; i++) {
+        for (int i = 1; i <= length; i++) {
             p.next = new ListNode(i);
             p = p.next;
         }
-        return head;
+        return head.next;
     }
 
     //返回一个 固定长度无序 链表 {1，2，3，4，5}
@@ -128,6 +128,7 @@ public class utils {
             }
             head = head.next;
         }
+        System.out.println();
     }
 
     //打印集合
