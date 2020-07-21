@@ -9,6 +9,25 @@ import java.util.*;
  * Created by lenovo on 20/7/19.
  */
 public class utils {
+    // 1->2->3->3->4->4->5
+    public static ListNode getDuplicateList() {
+        ListNode head = new ListNode(1);
+        ListNode p2 = new ListNode(1);
+        ListNode p3 = new ListNode(3);
+        ListNode p4 = new ListNode(3);
+        ListNode p5 = new ListNode(4);
+        ListNode p6 = new ListNode(4);
+        ListNode p7 = new ListNode(5);
+
+        head.next = p2;
+        p2.next = p3;
+        p3.next = p4;
+        p4.next = p5;
+        p5.next = p6;
+        p6.next = p7;
+
+        return head;
+    }
 
     //返回一个 指定长度有序 链表 {1，2，3，4，5,...}
     public static ListNode getListOrder(int length) {
@@ -40,7 +59,7 @@ public class utils {
     public static ListNode getListNorder(int length) {
         List<Integer> list = new ArrayList<Integer>();
         for (int i = 0; i < length; i++)
-            list.add(new Integer(i+1));
+            list.add(new Integer(i + 1));
         Collections.shuffle(list);
         ListNode head = new ListNode(list.get(0));
         ListNode p = head;
