@@ -12,7 +12,7 @@ public class utils {
     // 1->2->3->3->4->4->5
     public static ListNode getDuplicateList() {
         ListNode head = new ListNode(1);
-        ListNode p2 = new ListNode(1);
+        ListNode p2 = new ListNode(2);
         ListNode p3 = new ListNode(3);
         ListNode p4 = new ListNode(3);
         ListNode p5 = new ListNode(4);

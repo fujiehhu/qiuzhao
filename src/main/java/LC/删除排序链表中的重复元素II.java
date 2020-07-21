@@ -3,6 +3,8 @@ package LC;
 import JZ.ListNode;
 import utils.utils;
 
+import java.util.*;
+
 public class 删除排序链表中的重复元素II {
     /*
      *给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
@@ -16,23 +18,25 @@ public class 删除排序链表中的重复元素II {
 
     //[1,1,1,2,3]
     public static ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode pre = new ListNode(0);
-        pre.next = head;
-        ListNode p = head;
-        ListNode q = head.next;
-        while (q != null) {
-            while (p == q) {
-                q = q.next;
+        ListNode tem = new ListNode(0);
+        ListNode res = tem;
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+        while (head != null) {
+            if (!map.containsKey(head.val)) {
+                map.put(head.val, 0);
+            } else {
+                map.put(head.val, 1);
             }
-            pre.next = q;
-            p = q;
-            q = q.next;
+            head = head.next;
         }
-
-
-        return p.next;
+        System.out.println(map);
+        for (Integer k : map.keySet()) {
+            if (map.get(k) == 0) {
+                tem.next = new ListNode(k);
+                tem = tem.next;
+            }
+        }
+        utils.printListNode(res);
+        return res.next;
     }
 }
