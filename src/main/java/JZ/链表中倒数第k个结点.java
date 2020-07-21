@@ -16,7 +16,6 @@ public class 链表中倒数第k个结点 {
         for (int i = 0; i < 3; i++) {
             p.next = new ListNode(i);
             p = p.next;
-
         }
 
         ListNode res = FindKthToTail(node.next, 2);

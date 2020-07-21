@@ -3,24 +3,62 @@ package utils;
 import JZ.ListNode;
 
 import java.util.List;
+import java.util.*;
 
 /**
  * Created by lenovo on 20/7/19.
  */
 public class utils {
 
-    //返回一个链表 {1，2，3，4，5}
-    public static ListNode getList() {
+    //返回一个 指定长度有序 链表 {1，2，3，4，5,...}
+    public static ListNode getListOrder(int length) {
         ListNode head = new ListNode(1);
-        ListNode p2 = new ListNode(2);
-        ListNode p3 = new ListNode(3);
-        ListNode p4 = new ListNode(4);
-        ListNode p5 = new ListNode(5);
+        ListNode p = head;
+        for (int i = 2; i < length; i++) {
+            p.next = new ListNode(i);
+            p = p.next;
+        }
+        return head;
+    }
 
-        head.next = p2;
-        p2.next = p3;
-        p3.next = p4;
-        p4.next = p5;
+    //返回一个 固定长度无序 链表 {1，2，3，4，5}
+    public static ListNode getListNorder() {
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i = 0; i < 10; i++)
+            list.add(new Integer(i));
+        Collections.shuffle(list);
+        ListNode head = new ListNode(list.get(0));
+        ListNode p = head;
+        for (int i = 1; i < list.size(); i++) {
+            p.next = new ListNode(list.get(i));
+            p = p.next;
+        }
+        return head;
+    }
+
+    //返回一个 指定长度无序 链表 {1，2，3，4，5}
+    public static ListNode getListNorder(int length) {
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i = 0; i < length; i++)
+            list.add(new Integer(i+1));
+        Collections.shuffle(list);
+        ListNode head = new ListNode(list.get(0));
+        ListNode p = head;
+        for (int i = 1; i < list.size(); i++) {
+            p.next = new ListNode(list.get(i));
+            p = p.next;
+        }
+        return head;
+    }
+
+    //返回一个 固定长度有序 链表 {1，2，3，4，5}
+    public static ListNode getListOrder() {
+        ListNode head = new ListNode(1);
+        ListNode p = head;
+        for (int i = 2; i < 8; i++) {
+            p.next = new ListNode(i);
+            p = p.next;
+        }
         return head;
     }
 
@@ -55,6 +93,7 @@ public class utils {
             System.out.print(arr[i] + " ");
         }
     }
+
     public static void printarr(double[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -70,6 +109,7 @@ public class utils {
             System.out.println();
         }
     }
+
     public static void printarr(double[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
@@ -80,15 +120,18 @@ public class utils {
     }
 
     //打印链表
-    public static void printNode(ListNode head) {
+    public static void printListNode(ListNode head) {
         while (head != null) {
-            System.out.print(head.val + " ");
+            System.out.print(head.val);
+            if (head.next != null) {
+                System.out.print(" -> ");
+            }
             head = head.next;
         }
     }
 
     //打印集合
-    public static void printList(List list) {
+    public static void printArray(List list) {
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
         }
