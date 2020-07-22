@@ -74,7 +74,7 @@ public class utils {
     public static ListNode getListOrder() {
         ListNode head = new ListNode(1);
         ListNode p = head;
-        for (int i = 2; i < 8; i++) {
+        for (int i = 2; i <= 5; i++) {
             p.next = new ListNode(i);
             p = p.next;
         }
@@ -194,4 +194,14 @@ public class utils {
         }
         return -1;
     }
+
+    //递归反转整个链表
+    public static ListNode reverse(ListNode head) {
+        if (head.next == null) return head;
+        ListNode last = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
+    }
+
 }
