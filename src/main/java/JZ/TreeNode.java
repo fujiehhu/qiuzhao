@@ -1,7 +1,7 @@
 package JZ;
 
 /**
- * Created by lenovo on 20/7/18.
+ * Created by fujie on 20/7/18.
  */
 //树的定义
 public class TreeNode {
