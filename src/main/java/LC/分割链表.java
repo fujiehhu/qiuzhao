@@ -14,8 +14,6 @@ public class 分割链表 {
      * 输出: 3->1->2->10->5->5->8
      * */
     public static void main(String[] args) {
-        String s = "祝你考出好成绩！";
-        System.out.println(s.length());
     }
 
     public ListNode partition(ListNode head, int x) {
