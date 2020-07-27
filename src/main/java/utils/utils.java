@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.*;
 
 /**
- * Created by lenovo on 20/7/19.
+ * Created by fujie on 20/7/19.
  */
 public class utils {
     // 1->2->3->3->4->4->5
@@ -152,9 +152,13 @@ public class utils {
 
     //打印集合
     public static void printArray(List list) {
-        for (int i = 0; i < list.size(); i++) {
-            System.out.print(list.get(i) + " ");
-        }
+        //for (int i = 0; i < list.size(); i++) {
+        //    System.out.print(list.get(i) + " ");
+        //}
+
+        // Lambda 表达式
+        list.forEach(x -> System.out.println(x));
+        //list.forEach(System.out::println);
     }
 
     //十进制转二进制

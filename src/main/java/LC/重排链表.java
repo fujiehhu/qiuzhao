@@ -1,7 +1,6 @@
 package LC;
 
 import JZ.ListNode;
-
 import utils.utils;
 
 /**
@@ -21,6 +20,8 @@ public class 重排链表 {
     }
 
     public static void reorderList(ListNode head) {
+        utils.printListNode(head);
+        ListNode res = head;
         //先找中点
         //快慢指针
         ListNode slow = head;
@@ -29,6 +30,30 @@ public class 重排链表 {
             slow = slow.next;
             fast = fast.next.next;
         }
+        //断开链表 ，反转链表
+        ListNode seclist = slow.next;
+        slow.next = null;
+        seclist = reverse(seclist);
+        utils.printListNode(seclist);
+        utils.printListNode(head);
+        while (seclist != null) {
+            ListNode p = head.next;
+            ListNode q = seclist.next;
+            head.next = seclist;
+            seclist.next = p;
+            head = p;
+            seclist = q;
+        }
+        utils.printListNode(res);
         System.out.println(slow.val);
+        head = res;
+    }
+
+    static ListNode reverse(ListNode head) {
+        if (head.next == null) return head;
+        ListNode last = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
     }
 }
