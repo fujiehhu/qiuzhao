@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="qiuzhao" />
+        <module name="qz" />
+        <module name="ssm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="qiuzhao" target="1.7" />
+      <module name="qz" target="1.7" />
+      <module name="ssm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
