@@ -1,5 +1,8 @@
 package LC;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by fujie on 20/7/26.
  */
@@ -12,19 +15,60 @@ public class 字符串压缩 {
 //    输出："a2b1c5a3"
 
     public static void main(String[] args) {
-
+        compressString("aabcccccaaa");
     }
 
     public static String compressString(String S) {
 
         int i = 0;
         char tmp = S.charAt(0);
-
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
         while (i < S.length()) {
-
+            if (S.charAt(i) == tmp) {
+                count++;
+            } else {
+                sb.append(tmp);
+                sb.append(count);
+                count = 1;
+                tmp = S.charAt(i);
+            }
             i++;
         }
+        sb.append(tmp);
+        sb.append(count);
+        System.out.println(sb);
+        return sb.toString();
+    }
 
-        return "0";
+    public String get(String S) {
+        if (S.length() == 0) {
+            return "";
+        }
+        int len = 0;
+        List ls = new ArrayList<>();
+        ls.add(S.charAt(0));
+        ls.add(0);
+        int t = 0;
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) == (char) ls.get(t)) {
+                len++;
+                ls.remove(ls.size() - 1);
+                ls.add(len);
+
+            } else {
+                t += 2;
+                len = 1;
+                ls.add(S.charAt(i));
+                ls.add(1);
+            }
+        }
+        String rr = "";
+        for (Object o : ls) {
+            rr += o;
+        }
+
+
+        return rr.length() < S.length() ? rr : S;
     }
 }
