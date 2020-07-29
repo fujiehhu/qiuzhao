@@ -138,6 +138,15 @@ public class utils {
         }
     }
 
+    public static void printarr(char[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     //打印链表
     public static void printListNode(ListNode head) {
         while (head != null) {
