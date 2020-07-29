@@ -1,4 +1,4 @@
-package LC;
+package LC.STRING;
 
 import java.util.ArrayList;
 import java.util.List;

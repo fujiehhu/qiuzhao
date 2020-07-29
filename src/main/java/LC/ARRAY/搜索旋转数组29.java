@@ -1,4 +1,4 @@
-package LC;
+package LC.ARRAY;
 
 public class 搜索旋转数组29 {
     /*

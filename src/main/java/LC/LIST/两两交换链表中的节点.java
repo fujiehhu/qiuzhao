@@ -1,4 +1,4 @@
-package LC;
+package LC.LIST;
 
 import JZ.ListNode;
 import utils.utils;

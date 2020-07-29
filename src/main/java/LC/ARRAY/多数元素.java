@@ -1,4 +1,4 @@
-package LC;
+package LC.ARRAY;
 
 import java.util.Arrays;
 

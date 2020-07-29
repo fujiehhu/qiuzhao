@@ -1,4 +1,4 @@
-package LC;
+package LC.XOR;
 
 import utils.utils;
 
