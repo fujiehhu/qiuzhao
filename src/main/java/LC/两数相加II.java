@@ -1,6 +1,11 @@
 package LC;
 
 import JZ.ListNode;
+import com.sun.org.apache.bcel.internal.generic.LNEG;
+import utils.utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by fujie on 20/7/27.
@@ -14,11 +19,27 @@ public class 两数相加II {
 
 
     public static void main(String[] args) {
+        ListNode l11 = new ListNode(9);
+        ListNode l12 = new ListNode(1);
+        ListNode l13 = new ListNode(1);
+        ListNode l14 = new ListNode(1);
 
+        ListNode l21 = new ListNode(9);
+        ListNode l22 = new ListNode(1);
+        ListNode l23 = new ListNode(1);
+
+//        l11.next = l12;
+//        l12.next = l13;
+//        l13.next = l14;
+
+//        l21.next = l22;
+//        l22.next = l23;
+
+        "22".equals("33");
+        addTwoNumbers(l11, l21);
     }
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         return null;
     }
