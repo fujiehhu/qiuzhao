@@ -118,6 +118,11 @@ public class utils {
             System.out.print(arr[i] + " ");
         }
     }
+    public static void printarr(String[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
 
     //打印二维数组
     public static void printarr(int[][] arr) {
@@ -139,6 +144,14 @@ public class utils {
     }
 
     public static void printarr(char[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public static void printarr(String[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
