@@ -35,7 +35,7 @@ public class 岛屿数量 {
         Queue<List<Object>> queue = new LinkedList<>();//queue==0时 岛屿数+1   值，x ，y
         List<String> isused = new ArrayList<>();
         int lands = 0;
-        //队头入队 不为0入队 TODO
+        //队头入队 不为0入队
         List<Object> head = new ArrayList<>();
         head.add(grid[0][0]);
         head.add(0);
