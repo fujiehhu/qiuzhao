@@ -2,8 +2,9 @@ package utils;
 
 import JZ.ListNode;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.*;
 
 /**
  * Created by fujie on 20/7/19.
@@ -118,6 +119,7 @@ public class utils {
             System.out.print(arr[i] + " ");
         }
     }
+
     public static void printarr(String[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
@@ -151,7 +153,17 @@ public class utils {
             System.out.println();
         }
     }
+
     public static void printarr(String[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printarr(boolean[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
