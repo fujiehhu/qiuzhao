@@ -1,4 +1,4 @@
-package LC;
+package LC.ARRAY;
 
 /**
  * Created by fujie on 20/8/1.
