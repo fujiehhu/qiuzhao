@@ -185,13 +185,13 @@ public class utils {
     }
 
     //打印集合
-    public static void printArray(List list) {
+    public static void printList(List list) {
         //for (int i = 0; i < list.size(); i++) {
         //    System.out.print(list.get(i) + " ");
         //}
 
         // Lambda 表达式
-        list.forEach(x -> System.out.println(x));
+        list.forEach(x -> System.out.print(x + " "));
         //list.forEach(System.out::println);
     }
 

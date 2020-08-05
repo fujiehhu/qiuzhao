@@ -1,5 +1,7 @@
 package LC;
 
+import java.util.HashMap;
+
 /**
  * Created by fujie on 20/7/29.
  */
