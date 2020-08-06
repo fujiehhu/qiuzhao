@@ -1,4 +1,4 @@
-package LC;
+package LC.DP;
 
 /**
  * Created by fujie on 20/8/4.

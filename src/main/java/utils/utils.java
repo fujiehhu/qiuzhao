@@ -192,6 +192,7 @@ public class utils {
 
         // Lambda 表达式
         list.forEach(x -> System.out.print(x + " "));
+        System.out.println();
         //list.forEach(System.out::println);
     }
 
