@@ -20,9 +20,6 @@ public class 最后一个单词的长度 {
         string = string.trim();
         //String[] split = string.split(" ");
         String s = new String();
-
-
-
         if(string.length()==0){
             return 0;
         }
