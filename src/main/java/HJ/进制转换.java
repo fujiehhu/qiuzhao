@@ -8,21 +8,15 @@ import java.util.Scanner;
 public class 进制转换 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //while (scanner.hasNextLine()) {
-
-
+        while (scanner.hasNextLine()) {//多组同时输入，死循环
             String s = scanner.nextLine();
-            //String s = "0xC4600";
             s = s.substring(2);
-            //System.out.println(s);
             int res = 0;
             for (int i = s.length() - 1; i >= 0; i--) {
                 res += Math.pow(16, i) * pro(s.charAt(s.length() - 1 - i));
-
             }
-            System.out.println(Long.parseLong(s, 16));
             System.out.println(String.valueOf(res));
-        //}
+        }
     }
 
     public static int pro(char c) {
@@ -52,3 +46,4 @@ public class 进制转换 {
         return a;
     }
 }
+
