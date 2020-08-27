@@ -16,5 +16,6 @@ public class 求int型正整数在内存中1的个数 {
             num = num / 2;
         }
         System.out.println(s);
+
     }
 }

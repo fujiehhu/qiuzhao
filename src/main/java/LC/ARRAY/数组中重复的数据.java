@@ -27,7 +27,7 @@ public class 数组中重复的数据 {
 
     public static List<Integer> findDuplicates(int[] nums) {
         //1.
-        List<Integer> list = new ArrayList<>();
+//        List<Integer> list = new ArrayList<>();
         List<Integer> res = new ArrayList<>();
 //        for (int num : nums) {
 //            if (!list.contains(num)) {
@@ -37,7 +37,6 @@ public class 数组中重复的数据 {
 //            }
 //        }
         //2把数组当作hashmap，value第一次置为负，如果访问时为负，说明存在相同的key
-        int n = nums.length + 1;
         for (int i = 0; i < nums.length; ++i) {
             if (nums[Math.abs(nums[i]) - 1] < 0) {
                 res.add(Math.abs(nums[i]));
