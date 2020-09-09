@@ -16,7 +16,7 @@ public class 最长上升子序列 {
         for (int i = 0; i < arr.length; i++) {
             dp[i] = 1;
         }
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < i; j++) {
                 if (dp[j] >= dp[i] && arr[j] <= arr[i]) {
                     dp[i] = dp[j] + 1;
