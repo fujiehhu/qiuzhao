@@ -15,7 +15,6 @@ public class 两数之和 {
     public static void main(String[] args) {
         int arr[] = {2, 17, 9, 15};
         twoSum(arr, 9);
-
     }
 
     public static int[] twoSum(int[] nums, int target) {
